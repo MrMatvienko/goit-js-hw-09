@@ -25,5 +25,20 @@ img {
 .timer {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  justify-content: center;
+  gap: 60px;
+  background-color: antiquewhite;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.value {
+  font-size: 72px;
+  margin: auto;
+}
+.label {
+  margin: auto;
 }
