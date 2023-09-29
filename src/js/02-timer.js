@@ -27,6 +27,7 @@ const options = {
     }
     if (selectedDates[0] > new Date()) {
       refs.start.disabled = false;
+      refs.input.disabled = true;
     }
 
     refs.start.addEventListener('click', () => {
