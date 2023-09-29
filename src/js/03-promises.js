@@ -34,7 +34,13 @@ function onSumbit(e) {
 
   for (let i = 1; i <= inputAmount; i += 1) {
     // inputDelay += inputStep;
-    let currentDelay = inputDelay + inputStep * i;
+    // let currentDelay = inputDelay + inputStep * i;
+    let currentDelay;
+    if (i === 1) {
+      currentDelay = inputDelay;
+    } else {
+      currentDelay = inputDelay + inputStep * (i - 1);
+    }
     createPromise(i, currentDelay)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
